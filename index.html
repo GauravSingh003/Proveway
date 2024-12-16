@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOGO Product Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- cart -->
+      <header class="cart" style="text-align: end; cursor: pointer" onclick="handleCart()">
+        <p>&#128722; Items</p>
+        <aside class="showCart hideCart">
+          <ul class="cart-items"></ul>
+        </aside>
+      </header>
+
+      <!-- heading -->
+      <header class="header">
+        <h1>YAY! It's BOGO</h1>
+      </header>
+
+      <!-- Main content -->
+      <main>
+        <section class="unit-options">
+          <!-- unit 1 -->
+          <article class="unit" data-unit="1" data-price="10.00">
+            <label for="unit-1">
+              <div class="details">
+                <div style="display: flex; gap: 10px;">
+                  <input type="radio" id="unit-1" name="unit" value="1" />
+                  <p>1 Unit</p>
+                  <span class="badge">20% Off</span>
+                </div>
+                <p class="price">$10.00 USD <span class="strike">$24.00 USD</span></p>
+              </div>
+              <p style="font-size: small;">Standard Price</p>
+            </label>
+            <div class="selectors">
+              <div style="display: flex; gap: 10px; margin-top: 5px;">
+                <label>Size</label>
+                <select>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                </select>
+                <label>Color</label>
+                <select>
+                  <option value="Black">Black</option>
+                  <option value="White">White</option>
+                  <option value="Blue">Blue</option>
+                </select>
+              </div>
+            </div>
+          </article>
+
+          <!-- unit 2 -->
+          <article class="unit most-popular" data-unit="2" data-price="18.00">
+            <label for="unit-2">
+              <span class="badge popular">MOST POPULAR</span>
+              <div class="details">
+                <div style="display: flex; gap: 10px;">
+                  <input type="radio" id="unit-2" name="unit" value="2" checked />
+                  <p>2 Units</p>
+                  <span class="badge">20% Off</span>
+                </div>
+                <p class="price">$18.00 USD <span class="strike">$24.00 USD</span></p>
+              </div>
+            </label>
+            <div class="selectors">
+              <div style="display: flex; gap: 10px; margin-top: 5px;">
+                <label for="size1">#1 Size</label>
+                <select id="size1">
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                </select>
+                <label for="color1">Color</label>
+                <select id="color1">
+                  <option value="Black">Black</option>
+                  <option value="White">White</option>
+                  <option value="Blue">Blue</option>
+                </select>
+              </div>
+              <div style="display: flex; gap: 10px; margin-top: 10px;">
+                <label for="size2">#2 Size</label>
+                <select id="size2">
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                </select>
+                <label for="color2">Color</label>
+                <select id="color2">
+                  <option value="Black">Black</option>
+                  <option value="White">White</option>
+                  <option value="Blue">Blue</option>
+                </select>
+              </div>
+            </div>
+          </article>
+          
+
+          <!-- unit 3 -->
+          <article class="unit" data-unit="3" data-price="24.00">
+            <label for="unit-3">
+              <div class="details">
+                <div style="display: flex; gap: 10px;">
+                  <input type="radio" id="unit-3" name="unit" value="3" />
+                  <p>3 Units</p>
+                  <span class="badge">20% Off</span>
+                </div>
+                <p class="price">$24.00 USD <span class="strike">$24.00 USD</span></p>
+              </div>
+            </label>
+            <div class="selectors">
+              <div style="display: flex; gap: 10px; margin-top: 5px;">
+                <label>Size</label>
+                <select>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                </select>
+                <label>Color</label>
+                <select>
+                  <option value="Black">Black</option>
+                  <option value="White">White</option>
+                  <option value="Blue">Blue</option>
+                </select>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <!-- footer -->
+      <footer class="footer">
+        <p>Free Delivery</p>
+        <div class="total">Total: <span>$18.00 USD</span></div>
+        <button class="cart-btn" onclick="addToCart()">+ Add to Cart</button>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
